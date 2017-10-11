@@ -1,7 +1,7 @@
 module.exports = {
   components: "src/components/**/[A-Z]*.js",
   defaultExample: true,
-  title: "Styleguidist Boilerplate",
+  title: "React Payment Request",
   webpackConfig: {
     module: {
       rules: [
