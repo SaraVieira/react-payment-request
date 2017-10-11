@@ -1,22 +1,70 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./Button.css";
+const Button = ({
+  supportedNetworks,
+  supportedMethods,
+  onClick,
+  children,
+  requestPayerName,
+  requestPayerEmail,
+  onSuccess,
+  onError,
+  currency,
+  totalLabel,
+  total,
+  displayItems
+}) => {
+  const paymentMethods = [
+    {
+      supportedMethods: supportedMethods,
+      supportedNetworks: supportedNetworks
+    }
+  ];
 
-/**
- * The only true button.
- */
-const Button = ({ color, size, onClick, children }) => {
-  const styles = {
-    color,
-    fontSize: Button.sizes[size]
+  const paymentDetails = {
+    total: {
+      label: totalLabel,
+      amount: {
+        currency: currency,
+        value: total
+      }
+    },
+    displayItems
   };
 
-  return (
-    <button className="button" style={styles} onClick={onClick}>
-      {children}
-    </button>
+  const options = {
+    requestPayerName,
+    requestPayerEmail
+  };
+
+  const paymentRequest = new PaymentRequest(
+    paymentMethods,
+    paymentDetails,
+    options
   );
+
+  const showUI = () =>
+    paymentRequest
+      .show()
+      .then(paymentResponse => {
+        return paymentResponse.complete().then(() => {
+          onSuccess(paymentResponse);
+        });
+      })
+      .catch(err => {
+        onError(err);
+      });
+
+  if (window.PaymentRequest) {
+    return (
+      <span role="button" onClick={showUI}>
+        {children}
+      </span>
+    );
+  } else {
+    // No support. Proceed the old school way
+  }
 };
 
 export default Button;
@@ -24,24 +72,30 @@ export default Button;
 Button.propTypes = {
   /** Button label */
   children: PropTypes.string.isRequired,
-  /** The color for the button */
-  color: PropTypes.string,
   /** The size of the button */
-  size: PropTypes.oneOf(["small", "normal", "large"]),
+  supportedMethods: PropTypes.array,
+  methodData: PropTypes.object,
   /** Gets called when the user clicks on the button */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  onSuccess: PropTypes.func,
+  onError: PropTypes.func,
+  requestPayerName: PropTypes.bool,
+  requestPayerEmail: PropTypes.bool
 };
+
 Button.defaultProps = {
-  color: "#333",
-  size: "normal",
+  supportedMethods: ["basic-card"],
+  supportedNetworks: ["visa", "mastercard"],
+  requestPayerName: false,
+  requestPayerEmail: false,
+  onSuccess: () => {},
+  onError: () => {},
+  currency: "USD",
+  totalLabel: "",
+  total: 0,
   /* eslint-disable no-console */
   onClick: event => {
     console.log("You have clicked me!", event.target);
   }
   /* eslint-enable no-console */
-};
-Button.sizes = {
-  small: "10px",
-  normal: "14px",
-  large: "18px"
 };
