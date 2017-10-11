@@ -1,5 +1,5 @@
 module.exports = {
-  components: "src/components/**/[A-Z]*.js",
+  components: "src/**/[A-Z]*.js",
   defaultExample: true,
   title: "React Payment Request",
   webpackConfig: {
