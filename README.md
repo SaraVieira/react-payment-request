@@ -14,3 +14,4 @@ yarn start
 ```
 
 License: MIT
+Logo Edited from: payment by Eucalyp from the Noun Project
