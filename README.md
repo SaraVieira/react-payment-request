@@ -9,6 +9,43 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/SaraVieira/react-payment-request.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
+A React component wrapper for the awesome Payment Request API.
+
+## Install
+
+```
+yarn add react-payment-request
+```
+
+```js
+import PaymentRequest from 'react-payment-request'
+
+const Pay = () =>
+  <button>
+    <PaymentRequest
+      total="50"
+      displayItems={[
+        {
+          label: "Promo code",
+          amount: {
+            currency: 'USD',
+            value: 32,
+          }
+        },
+        {
+          label: "Taxes",
+          amount: {
+            currency: 'USD',
+            value: 18
+          }
+        }
+      ]}
+      onSuccess={(data) => console.log(data)}>
+      Push Me
+     </PaymentRequest>
+  <button>
+```
+
 
 # Run
 
