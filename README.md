@@ -46,8 +46,14 @@ const Pay = () =>
   <button>
 ```
 
+## Resources
 
-# Run
+* [alligator.io](https://alligator.io/js/payment-request-api-intro/)
+* [W3](https://www.w3.org/TR/payment-request/)
+* [Google Developers](https://developers.google.com/web/fundamentals/payments/deep-dive-into-payment-request)
+
+
+## Run
 
 ```
 yarn
