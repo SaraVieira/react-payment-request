@@ -6823,9 +6823,9 @@ react-scripts@1.0.14:
   optionalDependencies:
     fsevents "1.1.2"
 
-react-styleguidist@6.0.30:
-  version "6.0.30"
-  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-6.0.30.tgz#988a09282f8af43749e44602349ec524dc1f07a0"
+react-styleguidist@6.0.31:
+  version "6.0.31"
+  resolved "https://registry.yarnpkg.com/react-styleguidist/-/react-styleguidist-6.0.31.tgz#db77cf38922715c89433a16628672363ad30964a"
   dependencies:
     ast-types "^0.9.13"
     buble "^0.15.2"
