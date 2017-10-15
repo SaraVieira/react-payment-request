@@ -1471,9 +1471,9 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
-bundlesize@0.15.2:
-  version "0.15.2"
-  resolved "https://registry.yarnpkg.com/bundlesize/-/bundlesize-0.15.2.tgz#56782be56d8c72f84d6bdb795a48c019425f2304"
+bundlesize@0.15.3:
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/bundlesize/-/bundlesize-0.15.3.tgz#5cf7a48c11fd2835cfc9112e24429bb47c086ca8"
   dependencies:
     axios "^0.16.2"
     bytes "^3.0.0"
