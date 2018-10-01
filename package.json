@@ -37,7 +37,7 @@
     "eslint-config-prettier": "2.6.0",
     "eslint-plugin-prettier": "2.3.1",
     "eslint-plugin-react": "7.4.0",
-    "husky": "0.14.3",
+    "husky": "1.1.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "21.2.1",
     "lint-staged": "4.3.0",
