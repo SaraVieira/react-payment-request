@@ -2689,11 +2689,10 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-config-prettier@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-2.6.0.tgz#f21db0ebb438ad678fb98946097c4bb198befccc"
-  dependencies:
-    get-stdin "^5.0.1"
+eslint-config-prettier@8.10.0:
+  version "8.10.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.10.0.tgz#3a06a662130807e2502fc3ff8b4143d8a0658e11"
+  integrity sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==
 
 eslint-config-react-app@^2.0.1:
   version "2.0.1"
@@ -3436,10 +3435,6 @@ get-own-enumerable-property-symbols@^2.0.1:
 get-stdin@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-4.0.1.tgz#b968c6b0a04384324902e8bf1a5df32579a450fe"
-
-get-stdin@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -5045,12 +5040,14 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lint-staged@4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-4.2.3.tgz#5a1f12256af06110b96225f109dbf215009a37a9"
+lint-staged@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-4.3.0.tgz#ed0779ad9a42c0dc62bb3244e522870b41125879"
+  integrity sha512-C/Zxslg0VRbsxwmCu977iIs+QyrmW2cyRCPUV5NDFYOH/jtRFHH8ch7ua2fH0voI/nVC3Tpg7DykfgMZySliKw==
   dependencies:
     app-root-path "^2.0.0"
     chalk "^2.1.0"
+    commander "^2.11.0"
     cosmiconfig "^1.1.0"
     execa "^0.8.0"
     is-glob "^4.0.0"
